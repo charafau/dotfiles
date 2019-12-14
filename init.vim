@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'dart-lang/dart-vim-plugin'
 
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
@@ -14,12 +14,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Darcula color
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 
 " Initialize plugin system
 call plug#end()
 
 set background=dark
-colorscheme PaperColor
+colorscheme dracula
 
 " settings
 
