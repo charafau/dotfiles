@@ -177,3 +177,14 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" tabs
+nnoremap tn :tabnew<Space> 
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst <CR>
+nnoremap tl :tablast<CR>
+
+" d deletes, not cuts
+nnoremap d "_d
+vnoremap d "_d
