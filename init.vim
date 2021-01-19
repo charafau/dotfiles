@@ -9,7 +9,9 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 
 " Use release branch
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -25,6 +27,7 @@ set background=dark
 colorscheme dracula
 
 " settings
+"
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -32,6 +35,9 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" Set relative numbers
+set rnu
 
 filetype on " detect files based on type
 filetype plugin on " when a file is edited its plugin is loaded
@@ -42,10 +48,10 @@ let mapleader = ","
 
 nnoremap <F5> :NERDTreeToggle<CR>
 
-" ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>p :GFiles<CR>
+
 
 
 
