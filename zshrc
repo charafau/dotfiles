@@ -1,19 +1,22 @@
-DISABLE_AUTO_UPDATE=true
+export ZSH="/home/charafau/.oh-my-zsh"
 
+ZSH_THEME="robbyrussell"
 
-source <(antibody init)
-ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+plugins=(git compleat history-substring-search zsh-syntax-highlighting)
 
-antibody bundle < ~/.zsh_plugins.txt
-antibody bundle ~/Utils/github/zsh/dracula.zsh-theme
+source $ZSH/oh-my-zsh.sh
 
-alias ls=lsd
-alias vim="nvim"
+alias vi=nvim
+alias vim=nvim
 
-alias flutter_stable='ln -sfn /Users/charafau/Utils/flutterSdk/flutterStable/ /Users/charafau/Utils/flutter'
-alias flutter_master='ln -sfn /Users/charafau/Utils/flutterSdk/flutterMaster/ /Users/charafau/Utils/flutter'
+alias flutter_stable='ln -sfn $HOME/Utils/flutterSdk/flutterStable/ $HOME/Utils/flutter'
+alias flutter_master='ln -sfn $HOME/Utils/flutterSdk/flutterMaster/ $HOME/Utils/flutter'
 
 export ANDROID_HOME="$HOME/Utils/android-sdk"
-export PATH="$PATH:$HOME/Utils/flutter/bin"
+export ANDROID_SDK_ROOT="$HOME/Utils/android-sdk"
+export NDK_HOME="$HOME/Utils/android-sdk/ndk/22.0.7026061"
+export ANDROID_NDK_HOME="$HOME/Utils/android-sdk/ndk/22.0.7026061"
+export PATH="$PATH:$HOME/Utils/flutter/bin:$HOME/.cargo/bin:$HOME/Utils/flutter/bin/cache/dart-sdk/bin:$HOME/.local/bin
 # fnm
-eval "$(fnm env --multi)"
+export PATH=/home/charafau/.fnm:$PATH
+eval "`fnm env`"
